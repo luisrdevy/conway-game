@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Game from "./Game";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <main>
+            <header>
+                <h1>Conway's Game of Life</h1>
+            </header>
+            <Game />
+            <section id="#rules">
+                <h2>Rules</h2>
+                <ol>
+                    <li>Any live cell with fewer than two live neighbours dies, as if by underpopolation.</li>
+                    <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+                    <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+                    <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+                </ol>
+            </section>
+            <section>
+                <a href="https://github.com/luisrdevy">luisrdevy</a>
+            </section>
+        </main>
+    )
 }
 
 export default App;
